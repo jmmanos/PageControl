@@ -8,6 +8,34 @@
 
 import UIKit
 
+extension UIColor {
+    func interpolate(between otherColor: UIColor, by fraction: CGFloat) -> UIColor {
+        var r1: CGFloat = 0, g1: CGFloat = 0, b1: CGFloat = 0, a1: CGFloat = 0
+        var r2: CGFloat = 0, g2: CGFloat = 0, b2: CGFloat = 0, a2: CGFloat = 0
+        
+        if self.cgColor.numberOfComponents == 4 {
+            getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        } else {
+            let conv = cgColor.converted(to: CGColorSpace(name: CGColorSpace.extendedSRGB)!, intent: CGColorRenderingIntent.defaultIntent, options: nil)!
+            r1 = conv.components![0]; g1 = conv.components![1]; b1 = conv.components![2]; a1 = conv.components![3]
+        }
+        
+        if otherColor.cgColor.numberOfComponents == 4 {
+            otherColor.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+        } else {
+            let conv = otherColor.cgColor.converted(to: CGColorSpace(name: CGColorSpace.extendedSRGB)!, intent: CGColorRenderingIntent.defaultIntent, options: nil)!
+            r2 = conv.components![0]; g2 = conv.components![1]; b2 = conv.components![2]; a2 = conv.components![3]
+        }
+        
+        let r = (1 - fraction) * r1 + fraction * r2
+        let g = (1 - fraction) * g1 + fraction * g2
+        let b = (1 - fraction) * b1 + fraction * b2
+        let a = (1 - fraction) * a1 + fraction * a2
+        print("Fraction: \(fraction),R: \(r), G: \(g), B: \(b), A: \(a)")
+        return UIColor(red: min(1,max(0,r)), green: min(1,max(0,g)), blue: min(1,max(0,b)), alpha: min(1,max(0,a)))
+    }
+}
+
 @IBDesignable open class PageControl: UIView {
     public enum Style: Int {
         case scroll = 0, fill, snake, scale
@@ -129,18 +157,24 @@ import UIKit
     /// Update indicator based on progress and style
     private func updateProgress(to progress: CGFloat) {
         // ignore if progress is outside of page indicators' valid range
-        guard progress > -0.5 && progress < CGFloat(numberOfPages) - 0.5 else { return }
+        guard progress > -0.2 && progress < CGFloat(numberOfPages) - 0.8 else { return }
         
         switch style {
         case .fill:
-            let maxLineWidth = min(indicatorWidth, indicatorHeight)/2
+            let maxLineWidth = -1 + min(indicatorWidth, indicatorHeight)/2
             for (index, layer) in indicatorLayers.enumerated() {
                 let delta = abs(CGFloat(index) - progress)
                 
                 let lineWidth: CGFloat
                 if delta < 1 {
-                    lineWidth = maxLineWidth * (1 - delta)
-                    layer.strokeColor = activeTint.cgColor
+                    lineWidth = 1 + maxLineWidth * (1 - delta)
+                    
+                    if CGFloat(index) <= progress {
+                        layer.strokeColor = activeTint.interpolate(between: inactiveTint, by: delta).cgColor
+                    } else {
+                        layer.strokeColor = inactiveTint.interpolate(between: activeTint, by: 1-delta).cgColor
+                    }
+                    
                 } else {
                     lineWidth = 1
                     layer.strokeColor = inactiveTint.cgColor
@@ -164,7 +198,13 @@ import UIKit
             for (index, layer) in indicatorLayers.enumerated() {
                 let delta = abs(CGFloat(index) - progress)
                 if delta < 1 {
-                    layer.fillColor = activeTint.cgColor
+                    
+                    if CGFloat(index) <= progress {
+                        layer.fillColor = activeTint.interpolate(between: inactiveTint, by: delta).cgColor
+                    } else {
+                        layer.fillColor = inactiveTint.interpolate(between: activeTint, by: 1-delta).cgColor
+                    }
+                    
                     layer.transform = CATransform3DMakeScale(1 + maxScale*(1-delta), 1 + maxScale*(1-delta), 1)
                 } else {
                     layer.fillColor = inactiveTint.cgColor
