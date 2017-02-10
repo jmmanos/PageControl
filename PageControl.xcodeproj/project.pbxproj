@@ -14,6 +14,7 @@
 		F0114B3C1E4D75BD00049B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0114B3A1E4D75BD00049B95 /* LaunchScreen.storyboard */; };
 		F0114B471E4D75BD00049B95 /* PageControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0114B461E4D75BD00049B95 /* PageControlTests.swift */; };
 		F0114B521E4D75BD00049B95 /* PageControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0114B511E4D75BD00049B95 /* PageControlUITests.swift */; };
+		F0114B601E4D798000049B95 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0114B5F1E4D798000049B95 /* PageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F0114B4D1E4D75BD00049B95 /* PageControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0114B511E4D75BD00049B95 /* PageControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlUITests.swift; sourceTree = "<group>"; };
 		F0114B531E4D75BD00049B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0114B5F1E4D798000049B95 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				F0114B311E4D75BD00049B95 /* AppDelegate.swift */,
 				F0114B331E4D75BD00049B95 /* ViewController.swift */,
+				F0114B5F1E4D798000049B95 /* PageControl.swift */,
 				F0114B351E4D75BD00049B95 /* Main.storyboard */,
 				F0114B381E4D75BD00049B95 /* Assets.xcassets */,
 				F0114B3A1E4D75BD00049B95 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				F0114B341E4D75BD00049B95 /* ViewController.swift in Sources */,
 				F0114B321E4D75BD00049B95 /* AppDelegate.swift in Sources */,
+				F0114B601E4D798000049B95 /* PageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
