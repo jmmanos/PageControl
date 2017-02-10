@@ -31,7 +31,7 @@ extension UIColor {
         let g = (1 - fraction) * g1 + fraction * g2
         let b = (1 - fraction) * b1 + fraction * b2
         let a = (1 - fraction) * a1 + fraction * a2
-        print("Fraction: \(fraction),R: \(r), G: \(g), B: \(b), A: \(a)")
+        
         return UIColor(red: min(1,max(0,r)), green: min(1,max(0,g)), blue: min(1,max(0,b)), alpha: min(1,max(0,a)))
     }
 }
@@ -194,7 +194,7 @@ extension UIColor {
             let origin = CGPoint(x: progress * (width + indicatorPadding),y: 0)
             activeLayer.frame = CGRect(origin: origin, size: CGSize(width: width, height: height))
         case .scale:
-            let maxScale = CGFloat(1)
+            let maxScale = CGFloat(0.5)
             for (index, layer) in indicatorLayers.enumerated() {
                 let delta = abs(CGFloat(index) - progress)
                 if delta < 1 {
@@ -216,7 +216,7 @@ extension UIColor {
             let height = max(0, self.indicatorHeight)
             
             let distanceFromPage = abs(round(progress) - progress)
-            let widthMultiplier = (1 + distanceFromPage * 1.8)
+            let widthMultiplier = (1 + distanceFromPage * 1.2)
             let finalWidth = width * widthMultiplier
             let centerX = progress * (indicatorWidth + indicatorPadding) + indicatorWidth/2
             let finalX = centerX - finalWidth/2

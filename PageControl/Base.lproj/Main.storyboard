@@ -26,47 +26,47 @@
                                 <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdV-Co-e1J" customClass="PageControl" customModule="PageControl" customModuleProvider="target">
-                                        <rect key="frame" x="117.5" y="0.0" width="140" height="10"/>
+                                        <rect key="frame" x="117.5" y="0.0" width="140" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorHeight">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="IBStyle">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorPadding">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorWidth">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
-                                                <color key="value" red="1" green="0.0" blue="0.099114384232890984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorWidth">
+                                                <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
+                                                <color key="value" red="0.5230111624910424" green="0.5230111624910424" blue="0.5230111624910424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="1.2"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nW2-Yi-ITu" customClass="PageControl" customModule="PageControl" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="104.5" width="135" height="15"/>
+                                        <rect key="frame" x="117.5" y="105" width="140" height="16"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
-                                                <color key="value" red="1" green="0.0" blue="0.099114384230000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.26215301089820309" green="0.98138572109946576" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="IBStyle">
                                                 <integer key="value" value="1"/>
@@ -75,18 +75,18 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorHeight">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorWidth">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="1.7"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEW-d9-nJ3" customClass="PageControl" customModule="PageControl" customModuleProvider="target">
-                                        <rect key="frame" x="85.5" y="214.5" width="204" height="9"/>
+                                        <rect key="frame" x="84.5" y="215.5" width="206" height="8"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
@@ -96,27 +96,27 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
-                                                <color key="value" red="1" green="0.0" blue="0.099114384230000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="1" green="0.00037984644721744676" blue="0.55890883138919434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorPadding">
-                                                <real key="value" value="26"/>
+                                                <real key="value" value="24"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorHeight">
-                                                <real key="value" value="9"/>
+                                                <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorWidth">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="1.6000000000000001"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZh-HN-NvB" customClass="PageControl" customModule="PageControl" customModuleProvider="target">
-                                        <rect key="frame" x="111.5" y="318.5" width="152" height="15"/>
+                                        <rect key="frame" x="124.5" y="319.5" width="126" height="14"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
@@ -126,22 +126,22 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
-                                                <color key="value" red="1" green="0.0" blue="0.099114384230000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
+                                                <color key="value" red="0.51216271689518744" green="0.51216271689518744" blue="0.51216271689518744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorPadding">
-                                                <real key="value" value="18"/>
+                                                <real key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorHeight">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorWidth">
-                                                <real key="value" value="16"/>
+                                                <real key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="1.6000000000000001"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -167,7 +167,7 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.26723458590902816" green="0.26723458590902816" blue="0.26723458590902816" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="U9I-gO-8S3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="9MC-Gv-l4Y"/>
                             <constraint firstItem="0Qy-61-TrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ml6-Fu-VKI"/>
